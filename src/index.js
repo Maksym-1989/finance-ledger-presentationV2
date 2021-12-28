@@ -1,12 +1,12 @@
 import './sass/main.scss';
 import $ from 'jquery';
 
-const header = document.querySelector('header');
+const headerRef = document.querySelector('header');
 const inputEmailRef = document.getElementById('email');
 const errorMessageRef = document.querySelector('.form_error-message');
 
 window.addEventListener('scroll', function () {
-  header.classList.toggle('sticky', window.scrollY > 0);
+  headerRef.classList.toggle('sticky', window.scrollY > 0);
 });
 
 $(document).ready(function () {
@@ -16,7 +16,7 @@ $(document).ready(function () {
       var hash = this.hash;
       $('html, body').animate(
         {
-          scrollTop: $(hash).offset().top - header.offsetHeight + 1,
+          scrollTop: $(hash).offset().top - headerRef.offsetHeight + 1,
         },
         800,
       );
@@ -24,7 +24,6 @@ $(document).ready(function () {
   });
 });
 
-console.log(header.offsetHeight);
 
 inputEmailRef.addEventListener('focus', function (e) {
   errorMessageRef.classList.add('form_error-message--hide');
