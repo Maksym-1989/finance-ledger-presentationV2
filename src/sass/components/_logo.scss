@@ -1,0 +1,32 @@
+.logo {
+  display: flex;
+  font-size: 32px;
+  text-align: center;
+
+  color: white;
+
+  transition: transform 250ms linear;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.15);
+  }
+}
+
+.logo__span {
+  color: $accent-color;
+
+  @include tablet() {
+    margin-right: 9.7px;
+  }
+}
+
+.fa-book-open {
+  color: $accent-color;
+
+  margin-right: 5.7px;
+
+  @include tablet() {
+    margin-right: 9.7px;
+  }
+}
